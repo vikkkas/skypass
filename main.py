@@ -1,15 +1,19 @@
 from data_manager import DataManager
 from flight_search import FlightSearch
 from datetime import datetime, timedelta
+from notification_manager import NotificationManager
 
 data_manager = DataManager()
 sheet_data = data_manager.get_destination_data()
 flight_search = FlightSearch()
+notification_manager = NotificationManager()
 
 ORIGIN_CITY_IATA = input('Enter your Departure airport IATA Code.')
 
-data_manager.get_destination_cities()
-data_manager.post_destination_cities()
+if sheet_data == []:
+    data_manager.get_destination_cities()
+    data_manager.post_destination_cities()
+    sheet_data = data_manager.get_destination_data()
 
 if sheet_data[0]["iataCode"] == "":
     for row in sheet_data:
@@ -28,4 +32,8 @@ for destination in sheet_data:
         to_time=six_month_from_today
     )
 
+    if flight.price < int(destination["lowestprice"]):
+        notification_manager.send_sms(
+            message=f"Low price alert! Only £{flight.price} to fly from {flight.origin_city}-{flight.origin_airport} to {flight.destination_city}-{flight.destination_airport}, from {flight.out_date} to {flight.return_date}."
+        )
 

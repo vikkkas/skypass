@@ -6,7 +6,7 @@ SHEETY_PRICES_ENDPOINT = 'https://api.sheety.co/7c30210397895aa36f9a0ab7fbbbe7d6
 
 class DataManager:
 
-    def _init_(self):
+    def __init__(self):
         self.destination_data = {}
         self.destinations = []
         self.destination_budgets = []
@@ -48,7 +48,7 @@ class DataManager:
                 json=new_data
             )
             print(response.text)
-            
+
     def update_destination_codes(self):
         for city in self.destination_data:
             new_data = {

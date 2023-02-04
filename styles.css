@@ -1,0 +1,113 @@
+#title {
+    height: 15%;
+    background-color: #08a8de;
+    font-family: sans-serif;
+    font-size: larger;
+    position: relative;
+}
+
+#main {
+    background: url(img.mp4);
+    background-position: 0px 0px;
+    padding: 0 100px 100px;
+    background-attachment: fixed;
+    position: relative;
+}
+
+#about {
+    padding: 19px;
+    text-align: center;
+    background-color: #47caf6;
+}
+
+#main-left {
+    padding-left: 600px;
+    padding-bottom: 2%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #fff;
+}
+
+.back-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+div.main {
+    width: 450px;
+    margin: 50px auto 0px auto;
+}
+
+h1 {
+    text-align: left;
+    padding: 20px;
+    font-family: sans-serif;
+}
+
+div.register {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 450px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 2px 2px 15px;
+    color: #ffffff;
+}
+
+#register {
+    margin: 20px;
+}
+
+label {
+    font-family: sans-serif;
+    font-size: 18px;
+    font-size: italics;
+}
+
+input#name {
+    width: 400px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    outline: 0px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+input#submit {
+    width: 200px;
+    padding: 7px;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 600;
+    border: none;
+    border-radius: 3px;
+    background-color: rgba(0, 145, 255, 0.8);
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+label,
+span,
+h2 {
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
